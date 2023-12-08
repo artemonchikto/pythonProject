@@ -156,16 +156,16 @@ def animation():#Построение анимации
     ball.image = p.transform.scale(ball.image, (30, 30))
     ball.rect = ball.image.get_rect()
     ball.rect.centerx = 150+800/2
-    ball.rect.centery = HEIGHT-650-50
     all_sprites = p.sprite.Group()
-    m = h/640
-    mt = 1 / FPS
+    m = 650/20000
+    ball.rect.centery = HEIGHT-h*m-50
+    mt = 1/60
     ball.t = 0
     ball.v = 0
     def falling():
         ball.t+=mt
-        ball.v = g*ball.t*m/mt/mt
-        ball.rect.centery += ball.v
+        ball.v = g*ball.t*m
+        ball.rect.centery = g*ball.t**2/2
         if ball.rect.bottom>HEIGHT-50:
             ball.rect.bottom = HEIGHT-50
     ball.update=falling
