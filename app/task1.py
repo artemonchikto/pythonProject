@@ -2,7 +2,7 @@ import pygame as p
 import numpy as np
 import matplotlib.pyplot as plt
 from app import window, bg
-from tkinter import Frame, Button, Label, Radiobutton, Entry, Canvas, PhotoImage, BooleanVar
+from tkinter import Frame, Button, Entry, Canvas, PhotoImage, BooleanVar
 from config import *
 from tkinter.ttk import Combobox, Checkbutton
 def task1():

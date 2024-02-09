@@ -7,6 +7,6 @@ window.title(NAME)
 window.resizable(False, False)
 bg = PhotoImage(file = os.path.join(BASEDIR, 'фон.png'))
 
-from app import menu
+from app import task2
 
 
